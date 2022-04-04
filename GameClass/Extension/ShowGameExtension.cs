@@ -7,11 +7,11 @@ namespace GameClass.Extension
 {
     public static class ShowGameExtension
     {
-        public static void ShowGameInfo(this Game game)
+        public static void ShowGameInfo(this Object obj)
         {
-            foreach (var item in game.GetType().GetProperties())
+            foreach (var item in obj.GetType().GetProperties())
             {
-                Console.WriteLine($"{item.Name} - {item.GetValue(game)}");
+                Console.WriteLine($"{item.Name} - {item.GetValue(obj)}");
             }
         }
     }
